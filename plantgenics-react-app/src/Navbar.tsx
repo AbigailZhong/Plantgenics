@@ -6,12 +6,12 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-sm justify-content-between">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/landing-page">
+                <Link className="navbar-brand" to="/">
                     <img className="brand" src={logo} alt='logo' /> 
                 </Link>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link to="/landing-page" className="nav-link">Home</Link>
+                        <Link to="/" className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/shop" className="nav-link">Shop</Link>

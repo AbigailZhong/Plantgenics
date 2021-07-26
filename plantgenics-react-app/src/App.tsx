@@ -67,10 +67,11 @@ class App extends Component <Props, State> {
           <Route exact path="/"><Home /></Route>
           <Route path="/shop" >
             <div className="shop-container">
-              <Wishlist />
+              {/* <Wishlist /> */}
               <div className="plants-container">
+                <h2>Shop Seeds</h2>
                 <DisplayPlants plants={ this.state.plants }/>
-                </div>
+              </div>
             </div>
           </Route>
           {/* <Route path="/create-bio" ><AddDeveloper addDeveloper={ this.addDeveloper } /></Route> */}
