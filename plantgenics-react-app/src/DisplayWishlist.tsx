@@ -1,29 +1,24 @@
 import React, { ReactElement } from 'react';
 import Plant from './Plant';
-import PlantListing from './PlantListing'
+import PlantListing from './PlantListing';
 import './Custom.css';
-import logo from './plant-logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 
 function Wishlist() {
     return (
-    <div id="wishlist">
-        <input type="image" id="wish_button" className="show_wish" name="wish_button" alt="press to show wishlist" src={logo} />
+    <div id="wishlist-container" className="shadow card d-flex- flex-row">
+        <div className="wishlist-button-holder">
+            <button type="button" className="btn" id="wishlist-button"><FontAwesomeIcon icon={faSeedling}/></button>
+            <p className="vertical-text">Wishlist</p>
+        </div>
 
-        <div>
-        <div className="offcanvas.show offcanvas-end" tabIndex= {-1} id="test" aria-labelledby="offcanvasLabel">
-            <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasLabel">Wishlist WIP</h5>
-                
+        <article className="wishlist-items-container">
+		    <div className="wislist-item d-flex flex-column">
+                <img className="img-fluid" src="https://www.edenbrothers.com/store/media/Seeds-Flowers/resized/Lobelia-Blue-Compact-2_medium.jpg" alt="lobelium"/>
+
             </div>
-            <div className="offcanvas-body d-flex">
-                <div className="wishlist-plant">
-                    <img src="https://www.edenbrothers.com/store/media/Seeds-Herbs/resized/SHCHA112-1_medium.jpg" className="img-fluid wishlist-icon" alt="..."></img>
-                    <h5>Chamomile</h5>
-                    <button type="button" className="btn text-light" data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="pulse" value="Submit">Remove</button>
-                </div>
-            </div>
-        </div>
-        </div>
+	    </article>
     </div>
     )
 }

@@ -14,6 +14,8 @@ import './Custom.css';
 import Navbar from './Navbar';
 import Home from './Home';
 import Wishlist from './DisplayWishlist';
+import Login from './Login';
+import Filter from './Filter';
 
 type Props = {}
 type State = { 
@@ -66,14 +68,16 @@ class App extends Component <Props, State> {
         <Switch>
           <Route exact path="/"><Home /></Route>
           <Route path="/shop" >
-            <div className="shop-container">
-              {/* <Wishlist /> */}
-              <div className="plants-container">
+            <div id="shop-container" className="d-flex flex-row">
+              <Filter/>
+              <Wishlist />
+              <div id="plants-container">
                 <h2>Shop Seeds</h2>
                 <DisplayPlants plants={ this.state.plants }/>
               </div>
             </div>
           </Route>
+          <Route exact path="/login"><Login /></Route>
           {/* <Route path="/create-bio" ><AddDeveloper addDeveloper={ this.addDeveloper } /></Route> */}
         </Switch>
       </Router>
