@@ -8,7 +8,6 @@ import {
   Route
 } from 'react-router-dom';
 import Plant from './Plant';
-import PlantListing from './PlantListing';
 import DisplayPlants from './displayPlants';
 import './Custom.css';
 import Navbar from './Navbar';
@@ -19,13 +18,15 @@ import Filter from './Filter';
 
 type Props = {}
 type State = { 
-  plants: Plant[]}
+  plants: Plant[],
+  wishlist: Plant[]}
 
 class App extends Component <Props, State> {
   constructor(props: any){
     super(props);
     this.state = {
-        plants: []
+        plants: [],
+        wishlist: []
     }
   }
 
@@ -36,11 +37,16 @@ class App extends Component <Props, State> {
   }
 
 
-  // addPlant = (plt: Plant) => {
-  //   plt.id = this.state.plants.length +1;
-  //   let newPlants = [...this.state.plants, plt];
-  //   this.setState({ plants: newPlants });
-  // }
+  addPlantToWishlist = (plt: Plant) => {
+    let newWishlist = [...this.state.wishlist, plt];
+    this.setState({ wishlist: newWishlist });
+  }
+
+  removePlantFromWishlist = (plt: Plant) => {
+    let newWishlist = [...this.state.wishlist]
+    newWishlist.splice(newWishlist.findIndex(p => p.name === plt.name),1);
+    this.setState({ wishlist: newWishlist });
+  }
 
   // ---------------No router code:
 
@@ -70,10 +76,10 @@ class App extends Component <Props, State> {
           <Route path="/shop" >
             <div id="shop-container" className="d-flex flex-row">
               <Filter/>
-              <Wishlist />
+              <Wishlist removePlantFromWishlist={this.removePlantFromWishlist} wishlist={ this.state.wishlist } />
               <div id="plants-container">
                 <h2>Shop Seeds</h2>
-                <DisplayPlants plants={ this.state.plants }/>
+                <DisplayPlants addPlantToWishlist={this.addPlantToWishlist} plants={ this.state.plants }/>
               </div>
             </div>
           </Route>

@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import Plant from './Plant';
-import PlantListing from './PlantListing'
 import './Custom.css';
 
 function Search() {
