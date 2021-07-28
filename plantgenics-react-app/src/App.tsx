@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-
+import swal from 'sweetalert';
 import {Component} from 'react';
 import { 
   BrowserRouter as Router,
@@ -21,9 +20,6 @@ type State = {
   plants: Plant[],
   wishlist: Plant[]}
 
-let wishlistStatus: Boolean = false; 
-//set wishlist to closed
-
 class App extends Component <Props, State> {
   constructor(props: any){
     super(props);
@@ -43,24 +39,36 @@ class App extends Component <Props, State> {
   addPlantToWishlist = (plt: Plant) => {
     let newWishlist = [...this.state.wishlist, plt];
     this.setState({ wishlist: newWishlist });
-    alert('Success! Added to the Wishlist.');
+    swal({
+      title: "Success!",
+      text: "Item added to your Wishlist.",
+      icon: "success"
+      });
   }
 
   removePlantFromWishlist = (plt: Plant) => {
     let newWishlist = [...this.state.wishlist]
-    newWishlist.splice(newWishlist.findIndex(p => p.name === plt.name),1);
-    this.setState({ wishlist: newWishlist });
-  }
 
-  /**
-   * toggleWishlist, switches wishlist mode
-   */
-  public toggleWishlist():void {
-    if (wishlistStatus===false) {
-      wishlistStatus = true;
-    } else {
-      wishlistStatus = false;
-    }
+    swal({
+      title: "Are you sure?",
+      text: "Remove this item from your wishlist?",
+      icon: "warning",
+      buttons: [true, true],
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+
+        newWishlist.splice(newWishlist.findIndex(p => p.name === plt.name),1);
+        this.setState({ wishlist: newWishlist });
+
+        swal("Poof! This item has been removed.", {
+          icon: "success",
+        });
+      } else {
+        swal("Item removal canceled.");
+      }
+    });
   }
 
   //--------with router:

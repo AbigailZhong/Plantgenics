@@ -3,8 +3,8 @@ import './Custom.css';
 
 function Home() {
     return (
-        <div className="landing-page">
-           <div className="hero">
+        <div className="full-page">
+           <div className="hero container-fluid">
                <div className="content">
                     <section className="site-title text-center">
                         <img className="home_brand animate__animated animate__fadeInUp" src={logo} alt='logo' />
