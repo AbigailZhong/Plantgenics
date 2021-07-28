@@ -4,6 +4,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "animate.css": "^4.1.1",
-    "mongodb": "^4.0.1"
+    "mongodb": "^4.0.1",
+    "sweetalert": "^2.1.2"
   }
 }
