@@ -2,8 +2,8 @@ import './Custom.css';
 
 function Filter() {
     return(
-        <div className="card shadow-sm" id="filter-container">
-            <h5 className="card-title">Filter</h5>
+        <div className="card shadow-sm animate__animated animate__fadeInLeft" id="filter-container">
+            <h5 className="card-title text-center filter-title">Filter</h5>
 	        <article className="card-group-item">
 		        <header className="card-header"><h6 className="title">Growing Cycle</h6></header>
 		        <div className="filter-content">
@@ -18,20 +18,20 @@ function Filter() {
 	        <article className="card-group-item">
 		        <header className="card-header"><h6 className="title">Type:</h6></header>
 		        <div className="filter-content">
-			        <div className="card-body">
-				        <label className="btn">
+			        <div className="card-body filter-btn-holder d-flex flex-row">
+				        <label className="btn filter-btn">
                             <input className="" type="checkbox" name="myradio" value="" />
-                            <span className="form-check-label">Flower</span>
+                            <span className="form-check-label"> Flower</span>
 				        </label>
 
-                        <label className="btn btn-success">
+                        <label className="btn filter-btn">
                         <input className="" type="checkbox" name="myradio" value="" />
-                        <span className="form-check-label">Vegetable</span>
+                        <span className="form-check-label"> Vegetable</span>
                         </label>
 
-                        <label className="btn btn-primary">
+                        <label className="btn filter-btn">
                         <input className="" type="checkbox" name="myradio" value="" />
-                        <span className="form-check-label">Herb</span>
+                        <span className="form-check-label"> Herb</span>
                         </label>
 			        </div>
 		        </div>

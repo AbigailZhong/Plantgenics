@@ -19,6 +19,8 @@ body {
     padding: 0 40px;
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
+    position: relative;
+    padding-top: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6 { 
@@ -44,11 +46,13 @@ p {
 .navbar {
     background-color: none;
     z-index: 10;
+    position: absolute;
+    top: 0;
 }
 
 .nav-link{
     color: black;
-    transition: transform 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
@@ -59,25 +63,30 @@ p {
 /*-------------------------Home Page*/
 
 .hero {
-    position: relative;
     height: 100vh;
     background: url(https://images.unsplash.com/photo-1438109382753-8368e7e1e7cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: -5rem;
+    margin-left: -40px;
+    margin-right: -40px;
 }
 
 #site-name{
+    width: 100%;
     font-size: 5rem;
 }
 
 .site-title {
     font-family: 'Zilla Slab', serif;
-    color: white;
+    color: var(--beige);
     z-index: 2;
-    position: absolute;
-    top:45%;
-    left: 25%;
-    justify-content: center!important;
+    padding-top: 15%;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+}
+
+.home_brand {
+    width: 100px;
 }
 
 .landing-imgs .img-fluid{
@@ -92,7 +101,9 @@ p {
 
 #filter-container {
     width: 20%;
-    max-height: 400px;
+    min-height: 430px;
+    max-height: 450px;
+    min-width: 200px!important;
 }
 
 #plants-container {
@@ -105,6 +116,18 @@ p {
     background-color: var(--beige);
 }
 
+.filter-btn {
+    margin: 5px;
+}
+
+.filter-btn-holder{
+    flex-wrap: wrap;
+}
+
+.filter-title{
+    padding: 10px;
+}
+
 /*----------------------------Wishlist */
 
 #wishlist-container{
@@ -115,7 +138,7 @@ p {
     max-width: 600px;
     background-color: var(--beige);
     position: absolute;
-    top: 20%;
+    top: 10%;
     right: 0;
     transition: width 2s ease-in-out;
     border-right: none;
@@ -141,11 +164,12 @@ p {
 #wishlist-items-container{
     justify-content: center;
     display: none;
+    flex-wrap: wrap;
 }
 
 .wishlist-item {
     width: 30%;
-    height: 60%;
+    height: 30%;
     padding: 10px;
     margin: 5px;
 }
@@ -154,19 +178,27 @@ p {
 
 /*----Favorite Button*/
 .favorite {
-    position: absolute;
-    top: 55%;
-    right: 6%;
     height:20px;
     color: var(--beige);
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out!important;
     cursor: pointer!important;
 }
 
 .favorite:hover {
-    transform: scale(1.3);
+    transform: scale(1.3)!important;
     color: var(--green);
-    
+}
+
+.plant-img-container{
+    position: relative;
+}
+
+.favorite-button {
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+    background-color: transparent;
+    border: none;
 }
 
 /*----Plant Listing container*/
@@ -182,6 +214,7 @@ p {
     width: 25%;
     margin: 5px;
     background-color: var(--beige);
+    min-width: 200px!important;
 }
 
 .card-body{
@@ -205,11 +238,9 @@ p {
 
 .login:active {
     transform: scale(0.95);
-  }
+}
 
-
-  
-  input[type=text] {
+input[type=text] {
     background-color: white;
     border: none;
     padding: 15px 32px;
@@ -222,27 +253,33 @@ p {
     border: 2px solid #f6f6f6;
     transition: all 0.5s ease-in-out;
     border-radius: 5px 5px 5px 5px;
-  }
+}
   
-  input[type=text]:focus {
+input[type=text]:focus {
     background-color: #fff;
     border-bottom: 2px solid var(--honey);
-  }
+}
   
-  input[type=text]:placeholder {
+input[type=text]:placeholder {
     color: #cccccc;
-  }
+}
 
-  .wrapper {
+.login-container {
+    z-index: 2;
     align-items: center;
     flex-direction: column; 
     justify-content: center;
     width: 100%;
     min-height: 100%;
     padding: 20px;
-  }
+}
+
+#login-wrapper {
+    background: url(https://images.unsplash.com/photo-1553275991-b6ba99f234e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1852&q=80);
+    background-size: cover;
+}
   
-  #formContent {
+#formContent {
     border-radius: calc(.25rem - 1px);
     background: var(--beige);
     padding: 30px;
@@ -251,5 +288,12 @@ p {
     position: relative;
     padding: 0px;
     text-align: center;
-  }
+}
   
+.login-icon{
+    width: 40px;
+    margin: 10px;
+    color: var(--green)
+}
+
+/*----login image*/

@@ -4,7 +4,7 @@ import './Custom.css';
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-sm justify-content-between">
+        <nav className="navbar navbar-expand-sm justify-content-between animate__animated animate__fadeIn">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                     <img className="brand" src={logo} alt='logo' /> 
