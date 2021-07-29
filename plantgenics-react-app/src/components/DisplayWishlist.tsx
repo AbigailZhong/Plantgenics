@@ -1,6 +1,5 @@
 import React, { ReactElement, useState, useEffect } from 'react';
-import Plant from './Plant';
-import './Custom.css';
+import Plant from '../models/Plant';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 

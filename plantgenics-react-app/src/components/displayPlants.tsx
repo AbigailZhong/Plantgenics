@@ -1,5 +1,5 @@
 import React, { MouseEventHandler, ReactElement } from 'react';
-import Plant from './Plant';
+import Plant from '../models/Plant';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import * as CSS from 'csstype';
@@ -28,19 +28,17 @@ function DisplayPlants({plants, addPlantToWishlist}:Props):ReactElement<any, any
                     </p>
                 </div>
 
-                <div className="modal fade" id={`${plant.name}-modal`} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade shadow" id={`${plant.name}-modal`} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog" role="document">
                     <div className="modal-content">
-                      <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">{plant.name}</h5>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
+                      <div className="modal-header" style={{backgroundImage: 'url("' + `${plant.image}` + '")'}}>
                       </div>
                       <div className="modal-body">
+                        <h4 className="modal-title" id="exampleModalLabel">{plant.name}</h4>
                         <p>{plant.description}</p>
                       </div>
-                      <div className="modal-footer">
+                      <div className="modal-footer d-flex justify-content-between">
+                        <p className="fw-bold">${plant.price}</p>
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                       </div>
                     </div>

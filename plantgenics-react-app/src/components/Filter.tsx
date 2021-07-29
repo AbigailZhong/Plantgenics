@@ -1,5 +1,3 @@
-import './Custom.css';
-
 function Filter() {
     return(
         <div className="card shadow-sm animate__animated animate__fadeInLeft" id="filter-container">

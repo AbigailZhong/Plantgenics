@@ -80,20 +80,21 @@ p {
 }
 
 #site-name{
+    font-family: 'Zilla Slab', serif;
     width: 100%;
     font-size: 9vw;
-}
-
-.site-title {
-    font-family: 'Zilla Slab', serif;
-    color: var(--beige);
-    z-index: 2;
-    padding-top: 30vh;
     text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
 
+.site-title {
+    color: var(--beige);
+    z-index: 2;
+    padding-top: 25vh;
+    
+}
+
 .home_brand {
-    width: 9vw;
+    width: 7vw;
     min-width: 3rem;
 }
 
@@ -241,6 +242,7 @@ p {
 .modal-header {
     background-size: cover;
     background-position: center;
+    height: 30vh;
 }
 
 .modal-footer {

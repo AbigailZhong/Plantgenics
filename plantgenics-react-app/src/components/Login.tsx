@@ -1,4 +1,3 @@
-import './Custom.css';
 import logo from './plant-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';

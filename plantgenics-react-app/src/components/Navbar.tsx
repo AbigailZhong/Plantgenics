@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from './plant-logo.png';
-import './Custom.css';
+import logo from '../resources/plant-logo.png';
 
 function Navbar() {
     return (

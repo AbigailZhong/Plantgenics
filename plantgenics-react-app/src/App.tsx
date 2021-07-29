@@ -6,14 +6,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Plant from './Plant';
-import DisplayPlants from './displayPlants';
+
 import './Custom.css';
-import Navbar from './Navbar';
-import Home from './Home';
-import Wishlist from './DisplayWishlist';
-import Login from './Login';
-import Filter from './Filter';
+import Plant from './models/Plant';
+import DisplayPlants from './components/displayPlants';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Wishlist from './components/DisplayWishlist';
+import Login from './components/Login';
+import Filter from './components/Filter';
 
 type Props = {}
 type State = { 
@@ -90,8 +92,8 @@ class App extends Component <Props, State> {
             </div>
           </Route>
           <Route exact path="/login"><Login /></Route>
-          {/* <Route path="/create-bio" ><AddDeveloper addDeveloper={ this.addDeveloper } /></Route> */}
         </Switch>
+        <Footer />
       </Router>
 
     );
