@@ -81,7 +81,7 @@ p {
 
 #site-name{
     width: 100%;
-    font-size: 10vw;
+    font-size: 9vw;
 }
 
 .site-title {
@@ -235,6 +235,21 @@ p {
 
 .btn {
     background-color: var(--green);
+}
+
+/*----popup modal*/
+.modal-header {
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-footer {
+    background-color: var(--beige);
+}
+
+.modal-img {
+    border-radius: calc(.25rem - 1px);
+    width: 40%;
 }
 
 /*------------------Admin Login---*/
