@@ -47,6 +47,7 @@ p {
     z-index: 10;
     position: absolute;
     top: 0;
+    width: calc(100vw - 80px);
 }
 
 .nav-link{
@@ -123,10 +124,6 @@ p {
 /*----------------------------Filter*/
 #filter-container {
     background-color: var(--beige);
-}
-
-.filter-btn {
-    margin: 5px;
 }
 
 .filter-btn-holder{

@@ -17,17 +17,17 @@ function Filter() {
 		        <header className="card-header"><h6 className="title">Type:</h6></header>
 		        <div className="filter-content">
 			        <div className="card-body filter-btn-holder d-flex flex-row">
-				        <label className="btn filter-btn">
+				        <label className="btn m-1">
                             <input className="" type="checkbox" name="myradio" value="" />
                             <span className="form-check-label"> Flower</span>
 				        </label>
 
-                        <label className="btn filter-btn">
+                        <label className="btn m-1">
                         <input className="" type="checkbox" name="myradio" value="" />
                         <span className="form-check-label"> Vegetable</span>
                         </label>
 
-                        <label className="btn filter-btn">
+                        <label className="btn m-1">
                         <input className="" type="checkbox" name="myradio" value="" />
                         <span className="form-check-label"> Herb</span>
                         </label>
